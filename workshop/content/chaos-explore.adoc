@@ -49,8 +49,8 @@ OpenShift Service Mesh uses **Kiali**, an open source project, to view configura
 Monitoring::
 +
 --
-image:grafana-logo.png[Grafana, 200]
-image:prometheus-logo.png[Prometheus, 200]
+image:images/grafana-logo.png[Grafana, 200]
+image:images/prometheus-logo.png[Prometheus, 200]
 
 OpenShift Service Mesh uses **Grafana** and **Prometheus** to provide out of the box metrics and monitoring for all services.
 --
@@ -58,8 +58,8 @@ OpenShift Service Mesh uses **Grafana** and **Prometheus** to provide out of the
 Tracing::
 +
 --
-image:jaeger-logo.png[Istio, 200]
-image:elastic-search-logo-color-horizontal.png[Elastic Search, 200]
+image:images/jaeger-logo.png[Istio, 200]
+image:images/elastic-search-logo-color-horizontal.png[Elastic Search, 200]
 
 Tracing allows you to track a single request as it makes its way between different services - or even inside a service - providing insight into the entire request process from start to finish. 
 OpenShift Service Mesh uses **Jaeger**, an open, distributed tracing system and **Elasticsearch**, a distributed, free and open search and analytics engine to capture distributed traces providing a “per request” view  for isolating bottlenecks between services.
@@ -162,13 +162,10 @@ image::images/travels-demo-design.png[travel-demo-design - Travel demo Project d
 
 A typical flow consists of the following steps:
 
-<.> A portal queries the travels service for available destinations.
-
-<.> Travels service queries the available hotels and returns to the portal shop.
-
-<.> A user selects a destination and a type of travel, which may include a flight and/or a car, hotel and insurance.
-
-<.> Cars, Hotels and Flights may have available discounts depending on user type.
+. A portal queries the travels service for available destinations.
+. Travels service queries the available hotels and returns to the portal shop.
+. A user selects a destination and a type of travel, which may include a flight and/or a car, hotel and insurance.
+. Cars, Hotels and Flights may have available discounts depending on user type.
 
 === Travel Control
 
@@ -192,9 +189,6 @@ image::images/kiali-control-add-rule.png[Kiali - Control Add Rule , 500]
 
 Then `*click on 'Show Advanced Options' and entering the following information*`:
 
-image::images/kiali-control-create-ingress.png[Kiali - Control Create Ingress , 500]
-
-
 .Gateways Settings
 [%header,cols=3*]
 |===
@@ -212,14 +206,7 @@ image::images/kiali-control-create-ingress.png[Kiali - Control Create Ingress , 
 |
 |===
 
-
-
-You can use this COPY/PASTE value to avoid Error
-[source,kiali,subs="{markup-in-source}",role=copypaste]
-.kiali
-----
-control-chaos-engineering{USER_ID}.{APPS_HOSTNAME_SUFFIX}
-----
+image::images/kiali-control-create-ingress.png[Kiali - Control Create Ingress , 500]
 
 Finally, `*click on the 'Create' button*`. You can now access the Travel Control Dashboard using the following URL, http://control-chaos-engineering{USER_ID}.{APPS_HOSTNAME_SUFFIX}[^, role='params-link'].
 

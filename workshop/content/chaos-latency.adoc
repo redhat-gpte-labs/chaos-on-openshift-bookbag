@@ -109,9 +109,9 @@ image::images/grafana-service-overview-configured.png[Grafana - Service Overview
 
 == Run the Chaos experiment
 
-In the {KIALI_URL}[Kiali Console^, role='params-link'], from the **'Graph' view**, `*right-click on the 'discounts' service and select 'Details'*`
+In the {KIALI_URL}[Kiali Console^, role='params-link'], from the **'Graph' view**, `*right-click on the 'discounts' service (triangle symbol) and select 'Details'*`
 
-image::images/kiali-right-click-service.png[Kiali - Right Click Service,400]
+image::images/kiali-right-click-service.png[Kiali - Right Click Service,600]
 
 You will be redirected to the Service Details page. 
 
@@ -314,7 +314,7 @@ image::images/kiali-configure-latency-retry.png[Kiali - Configure Latency Retry,
 
 == Validate the Improvement
 
-Back into the {GRAFANA_URL}[Chaos Engineering Dashboard], you can tell that we manage to contain the Latency propagation by **not exceeding 100 ms in general** using the Retry pattern while the 'discounts' service still has the 1s latency issue.
+Back into the {GRAFANA_URL}[Chaos Engineering Dashboard], you can tell that we manage to contain the latency propagation by **not exceeding 100 ms in general** using the Retry pattern while the 'discounts' service still has the 1s latency issue.
 
 image::images/grafana-latency-contained-overview.png[Grafana - Latency Contained Overview,900]
 
